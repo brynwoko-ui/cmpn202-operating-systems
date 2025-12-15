@@ -19,7 +19,7 @@ A threat model was developed to identify realistic risks applicable to a headles
 |------|------------|---------------------|
 | Brute-force SSH attacks | Automated attempts to guess SSH credentials | Disable password authentication, enforce key-based SSH, deploy fail2ban |
 | Unauthorised network access | Exposure of services to unintended hosts | Firewall rules allowing SSH only from the workstation IP |
-| Privilege escalation | Compromise of root privileges through misconfiguration | Use of non-root administrative user and strict sudo controls |
+| Privilege escalation | Compromie of root privileges through misconfiguration | Use of non-root administrative user and strict sudo controls |
 | Misconfigured services | Unnecessary services increasing attack surface | Service audit and justification in later phases |
 
 This threat model informs all subsequent security decisions and provides a reference point for later security auditing.
