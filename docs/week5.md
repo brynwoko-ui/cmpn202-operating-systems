@@ -27,7 +27,7 @@ To demonstrate active enforcement, an existing profile was transitioned into enf
 sudo aa-enforce tcpdump
 <img width="940" height="219" alt="image" src="https://github.com/user-attachments/assets/326469b4-5b76-4c52-bac6-e28534931772" />
 
-
+```
 ## 3. Automatic Security Updates
 
 
@@ -40,22 +40,20 @@ The feature was installed and configured using:
 <img width="940" height="563" alt="image" src="https://github.com/user-attachments/assets/fe019d8e-7a77-4cb3-bea5-b2566fe74c98" />
 
 
-sudo apt install unattended-upgrades
+```sudo apt install unattended-upgrades
 sudo dpkg-reconfigure unattended-upgrades
-
+```
 
 The unattended-upgrades service was then verified to be running:
 
-sudo systemctl status unattended-upgrades
+```sudo systemctl status unattended-upgrades```
 
-<img width="940" height="302" alt="image" src="https://github.com/user-attachments/assets/7cefd156-919f-46e1-87cb-24550b9f893c" />
 
 This confirmed that the system was configured to automatically download and install security
 updates.
 
 
-
-4. Intrusion Prevention (fail2ban)
+## 4. Intrusion Prevention (fail2ban)
 
 fail2ban was implemented to protect the SSH service from brute-force authentication attacks.
 The tool monitors authentication logs and temporarily blocks IP addresses that demonstrate
@@ -63,9 +61,12 @@ malicious behaviour.
 
 fail2ban was installed, enabled, and started using:
 
-sudo apt install fail2ban
+```sudo apt install fail2ban
 sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
+sudo systemctl start fail2ban```
+```
+<img width="940" height="729" alt="image" src="https://github.com/user-attachments/assets/ada39fd1-1b0c-4e80-a794-ce6ef5de10f2" />
+<img width="940" height="732" alt="image" src="https://github.com/user-attachments/assets/e8a3843c-fdea-45a0-b6a9-73f5499b6dd2" />
 
 
 The service status was checked to confirm that fail2ban was operational:
@@ -78,9 +79,8 @@ The SSH jail was also verified to ensure that SSH login attempts were actively m
 sudo fail2ban-client status sshd
 
 
-<img width="940" height="732" alt="image" src="https://github.com/user-attachments/assets/e07cd4aa-5042-4c08-bc6e-29abfb803c8c" />
 
-5. Security Baseline Automation Script
+## 5. Security Baseline Automation Script
 
 To automate verification of the server’s security configuration, a security baseline script
 (security-baseline.sh) was created. The script performs read-only checks to confirm the status
@@ -103,14 +103,12 @@ sudo:
 
 sudo ./security-baseline.sh
 
+<img width="940" height="510" alt="image" src="https://github.com/user-attachments/assets/dcd89310-ee00-41d8-9e02-06b232bd263b" />
 
 The output confirmed that all security controls were configured correctly and enforcing as
 intended.
 
-<img width="940" height="510" alt="image" src="https://github.com/user-attachments/assets/96436d29-8eea-49c5-bcfc-1deb01930c69" />
-
-
-6. System Monitoring Automation Script
+## 6. System Monitoring Automation Script
 
 A lightweight monitoring script (monitor-server.sh) was developed to collect real-time system
 metrics. This script provides a repeatable snapshot of system performance and supports later
@@ -131,14 +129,14 @@ Top CPU-consuming processes
 The script was executed without elevated privileges:
 
 ./monitor-server.sh
+<img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/d22e523e-1367-4299-887c-733edb8e6e46" />
 
 
 The resulting output provides a clear overview of current system performance.
 
-<img width="940" height="508" alt="image" src="https://github.com/user-attachments/assets/bff9214a-156c-48d0-8f3d-a5ae49aa4f91" />
 
 
-7. Reflection
+ ## 7. Reflection
 
 This phase demonstrated the value of layered security controls within an operating system
 environment. Mandatory Access Control, automated patching, and intrusion prevention address
