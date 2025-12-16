@@ -1,9 +1,7 @@
 ### SSH Access Verification
 
 Remote administration was verified by successfully connecting to the server via SSH
-from the Windows workstation using key-based authentication. The SSH connection was established using:
-bash
-ssh adminuser@<server-ip>
+from the Windows workstation using key-based authentication
 
 
 ![SSH login from Windows PowerShell](images/week4-ssh-login.png)
