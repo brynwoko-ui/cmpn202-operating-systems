@@ -1,7 +1,10 @@
 ### SSH Access Verification
 
 Remote administration was verified by successfully connecting to the server via SSH
-from the Windows workstation using key-based authentication.
+from the Windows workstation using key-based authentication. The SSH connection was established using:
+```bash
+ssh adminuser@<server-ip>
+
 
 ![SSH login from Windows PowerShell](images/week4-ssh-login.png)
 ### SSH Hardening Configuration
@@ -15,7 +18,10 @@ attacks and unauthorised administrative access.
 
 A firewall was configured using UFW to deny all unsolicited inbound traffic while
 explicitly allowing SSH access. This limits network exposure while maintaining
-remote administrative connectivity.
+remote administrative connectivity. The firewall ruleset was verified using:
+```bash
+sudo ufw status verbose
+
 
 ![UFW firewall status](images/week4-ufw.png)
 The server’s IP address was identified using the `ip addr` command to enable SSH access
