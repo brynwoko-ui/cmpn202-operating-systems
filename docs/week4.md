@@ -2,7 +2,7 @@
 
 Remote administration was verified by successfully connecting to the server via SSH
 from the Windows workstation using key-based authentication. The SSH connection was established using:
-```bash
+bash
 ssh adminuser@<server-ip>
 
 
@@ -19,7 +19,7 @@ attacks and unauthorised administrative access.
 A firewall was configured using UFW to deny all unsolicited inbound traffic while
 explicitly allowing SSH access. This limits network exposure while maintaining
 remote administrative connectivity. The firewall ruleset was verified using:
-```bash
+bash
 sudo ufw status verbose
 
 
