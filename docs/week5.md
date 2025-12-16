@@ -29,7 +29,8 @@ sudo aa-enforce tcpdump
 
 
 
-##3. Automatic Security Updates
+## 3. Automatic Security Updates
+
 
 Automatic security updates were enabled to ensure that critical patches are applied promptly,
 reducing exposure to known vulnerabilities. Ubuntu’s unattended-upgrades mechanism was used
