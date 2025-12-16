@@ -28,7 +28,6 @@ sudo aa-enforce tcpdump
 <img width="940" height="219" alt="image" src="https://github.com/user-attachments/assets/326469b4-5b76-4c52-bac6-e28534931772" />
 
 
-
 ## 3. Automatic Security Updates
 
 
