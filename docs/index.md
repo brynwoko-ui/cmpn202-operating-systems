@@ -11,3 +11,5 @@ security implementation, and performance analysis.
 - [Week 4 – Remote Access and Networking](week4.md)
 - [Week 5 – System Hardening and Monitoring](week5.md)
 - [Week 6 – Performance Testing and Analysis](week6.md)
+- - [Week 7 – Overall Reflection and Evaluation](week7.md)
+
